@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --principal-color-100: #101f2c;
+  --principal-color-200: #0f2538;
+  --principal-color-300: #152b3d;
+  --secondary-color-100: #1e6bae;
+  --secondary-color-200: #135b90;
+  --secondary-color-300: #0d3d63;
+  --tertiary-color-100: #e0f8fc;
+  --tertiary-color-200: #def7fc;
+  --text-color-white: #fffefe;
+  --text-color-blue-white: #e0f8fc;
+  --text-color-blue: #1e6bae;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  // outline: 1px solid limegreen;
+  // background-color: rgb(51, 255, 0 / 0.1);
+}
+
+html,
+body {
+  font-family: system-ui;
+  font-family: 'Dank Mono', ui-monospace, monospace;
+  color: var(--text-color-blue-white);
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: var(--secondary-color-300); /* Set the background color */
+  color: var(--text-color-blue); /* Set the text color */
+}
+
+::-moz-selection {
+  background-color: var(--secondary-color-300); /* Set the background color for Mozilla Firefox */
+  color: var(--text-color-blue); /* Set the text color for Mozilla Firefox */
+}
+
+.wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.button-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+  button {
+    background-image: url('src/assets/images/bg.webp');
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--secondary-color-200);
+    transition: all 0.1s ease;
+
+    &:hover {
+      svg {
+        fill: var(--secondary-color-200);
+      }
+    }
+    &:active {
+      transform: translateY(3px);
+      box-shadow: 0 0 10px var(--text-color-blue-white);
+    }
+    svg {
+      height: 25px;
+      width: 25px;
+      fill: var(--text-color-blue-white);
+    }
+  }
+}
+
+.cursor {
+  position: fixed;
+  filter: blur(30px);
+  width: 300px;
+  height: 250px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(circle, var(--principal-color-100), transparent 80%);
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 768px) {
+  .button-to-top {
+    bottom: 40px;
+    right: 40px;
+    button {
+      svg {
+        height: 35px;
+        width: 35px;
+      }
+    }
+  }
+}
