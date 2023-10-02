@@ -188,11 +188,12 @@
       width: clamp(2rem, 5vw, 2.5rem);
       height: clamp(2rem, 5vw, 2.5rem);
       fill: var(--tertiary-color-100);
+      transition: all 300ms ease;
       &:hover {
         cursor: pointer;
         transform: scale(1.15);
         box-shadow: 0 0 10px var(--secondary-color-100);
-        fill: var(--secondary-color-100);
+        // fill: var(--secondary-color-100);
       }
     }
   }

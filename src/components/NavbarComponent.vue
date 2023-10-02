@@ -30,7 +30,7 @@
           @click="scrollToSection('projectsSection')"
           :class="{ activeSection: props.currentSection == 'projectsSection' }"
         >
-          Projects
+          My work
         </li>
       </ul>
     </nav>

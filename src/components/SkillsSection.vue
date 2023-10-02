@@ -321,7 +321,7 @@ const props = defineProps(['skillsSectionActive']);
     align-items: center;
   }
   .main-info {
-    padding: 30px 40px;
+    padding: 30px 40px !important;
     // margin-top: 80px;
   }
 }

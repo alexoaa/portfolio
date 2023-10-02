@@ -89,12 +89,18 @@ body {
 
 .cursor {
   position: fixed;
-  filter: blur(30px);
+  filter: blur(70px);
   width: 600px;
   height: 350px;
   border-radius: 50%;
   pointer-events: none;
-  background: radial-gradient(circle, var(--principal-color-100), transparent 80%);
+  background: radial-gradient(
+    circle,
+    var(--principal-color-100) 30%,
+    var(--principal-color-100) 70%,
+    transparent 100%
+  );
+  opacity: 0.2;
   transform: translate(-50%, -50%);
 }
 .section-hidden {
