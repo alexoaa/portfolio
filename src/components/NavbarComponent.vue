@@ -15,30 +15,24 @@
         }"
       >
         <li
-          type="button"
           @click="scrollToSection('aboutMeSection')"
           :class="{ activeSection: props.currentSection == 'aboutMeSection' }"
         >
           About me
         </li>
         <li
-          type="button"
           @click="scrollToSection('skillsSection')"
           :class="{ activeSection: props.currentSection == 'skillsSection' }"
         >
           Skills
         </li>
         <li
-          type="button"
           @click="scrollToSection('projectsSection')"
           :class="{ activeSection: props.currentSection == 'projectsSection' }"
         >
           Projects
         </li>
       </ul>
-      <!-- <section>
-        <button>English</button>
-      </section> -->
     </nav>
   </header>
 </template>
@@ -89,28 +83,50 @@ function scrollToSection(section) {
         font-size: clamp(1.2rem, 4vw, 1.8rem);
         font-weight: 400;
         cursor: pointer;
-        // min-height: 35px;
+        position: relative;
         min-width: 90px;
+        &::after {
+          transition: all 0.3s ease;
+          opacity: 0;
+          content: '';
+          position: absolute;
+          left: -5%;
+          bottom: -2px;
+          width: 0;
+          height: 50%;
+          clip-path: polygon(
+            48% 79%,
+            100% 79%,
+            100% 93%,
+            48% 93%,
+            38% 100%,
+            0 100%,
+            0 88%,
+            38% 88%
+          );
+          background-color: var(--text-color-blue-white);
+        }
         &:hover {
-          text-shadow: 0 0 20px var(--tertiary-color-100);
-          font-weight: 600;
-          transform: scale(1.1);
+          &::after {
+            width: 110% !important;
+            opacity: 1;
+          }
         }
       }
     }
   }
 }
 .navbarStickyClass {
-  box-shadow: 0 0 10px var(--principal-color-100);
-  box-shadow: 0 0 10px var(--secondary-color-200);
+  box-shadow: 0 0 10px var(--tertiary-color-100);
   nav {
     top: 0;
   }
-  background-image: url('src/assets/images/bg.webp');
+  backdrop-filter: blur(6px);
 }
 .activeSection {
-  text-shadow: 0 0 20px var(--tertiary-color-100);
-  font-weight: 600;
-  transform: scale(1.1);
+  &::after {
+    width: 110% !important;
+    opacity: 1 !important;
+  }
 }
 </style>

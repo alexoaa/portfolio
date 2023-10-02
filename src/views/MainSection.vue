@@ -1,23 +1,22 @@
 <template>
-  <section class="main-page md:justify-center">
+  <article class="main-page md:justify-center">
     <section class="relative w-full h-full flex flex-col items-center justify-center">
       <div
         class="main-logo"
         v-motion
         :initial="{
-          opacity: 0,
-          y: -100
+          opacity: 0
         }"
         :enter="{
           opacity: 1,
-          y: 0,
           transition: {
-            delay: 400
+            delay: 200,
+            duration: 750,
+            ease: 'easeInOut'
           }
         }"
       >
         <img src="@/assets/images/axoav3_HD_2.webp" alt="alexoa" class="h-[300px]" />
-        <!-- <img src="@/assets/images/axoav4_HD_1.webp" alt="alexoa" /> -->
       </div>
       <div class="main-info">
         <div
@@ -29,7 +28,9 @@
           :enter="{
             opacity: 1,
             transition: {
-              delay: 450
+              delay: 300,
+              duration: 750,
+              ease: 'easeInOut'
             }
           }"
         >
@@ -39,16 +40,20 @@
           class="my-[15px] md:mb-[20px]"
           v-motion
           :initial="{
-            opacity: 0
+            opacity: 0,
+            y: -15
           }"
           :enter="{
             opacity: 1,
+            y: 0,
             transition: {
-              delay: 500
+              delay: 300,
+              duration: 750,
+              ease: 'easeInOut'
             }
           }"
         >
-          Software Engineer
+          Software Developer
         </h2>
         <div
           class="social-contact"
@@ -59,7 +64,9 @@
           :enter="{
             opacity: 1,
             transition: {
-              delay: 600
+              delay: 400,
+              duration: 750,
+              ease: 'easeInOut'
             }
           }"
         >
@@ -76,10 +83,8 @@
         </div>
       </div>
     </section>
-  </section>
+  </article>
 </template>
-
-<script setup></script>
 
 <style scoped lang="scss">
 .main-page {
