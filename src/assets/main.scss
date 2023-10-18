@@ -2,10 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Urbanist';
+  src: url('@/assets/fonts/Urbanist-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Urbanist';
+  src: url('@/assets/fonts/Urbanist-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Urbanist';
+  src: url('@/assets/fonts/Urbanist-SemiBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
 :root {
-  --principal-color-100: #101f2c;
-  --principal-color-200: #0f2538;
-  --principal-color-300: #152b3d;
+  --primary-color-100: #101f2c;
+  --primary-color-darker-100: #020c14;
+  --primary-color-200: #0f2538;
+  --primary-color-300: #152b3d;
   --secondary-color-100: #1e6bae;
   --secondary-color-200: #135b90;
   --secondary-color-300: #0d3d63;
@@ -15,6 +35,7 @@
   --text-color-blue-white: #e0f8fc;
   --text-color-blue: #1e6bae;
 
+  --primary-color-100-opacity-4: #101f2c66;
   // SVG skills
   --html-color: #f16529;
   --css-color: #2965f1;
@@ -38,15 +59,16 @@
 
 html,
 body {
-  font-family: system-ui;
-  font-family: 'Dank Mono', ui-monospace, monospace;
+  font-family: 'Urbanist', system-ui, sans-serif;
+  font-weight: normal;
   color: var(--text-color-blue-white);
   scroll-behavior: smooth;
+  letter-spacing: 1px;
 }
 
 ::selection {
-  background-color: var(--secondary-color-300); /* Set the background color */
-  color: var(--text-color-blue); /* Set the text color */
+  background-color: var(--secondary-color-300);
+  color: var(--text-color-blue);
 }
 
 ::-moz-selection {
@@ -62,9 +84,8 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 10;
+  z-index: 50;
   button {
-    background-image: url('src/assets/images/bg.webp');
     padding: 5px;
     border-radius: 5px;
     box-shadow: 0 0 10px var(--secondary-color-200);
@@ -91,13 +112,13 @@ body {
   position: fixed;
   filter: blur(70px);
   width: 600px;
-  height: 350px;
+  height: 400px;
   border-radius: 50%;
   pointer-events: none;
   background: radial-gradient(
     circle,
-    var(--principal-color-100) 30%,
-    var(--principal-color-100) 70%,
+    var(--primary-color-100) 30%,
+    var(--primary-color-100) 70%,
     transparent 100%
   );
   opacity: 0.2;
@@ -108,6 +129,12 @@ body {
 }
 .section-show {
   opacity: 1;
+}
+.section-title {
+  width: fit-content;
+  font-size: 2.7rem;
+  border-bottom: 3px solid var(--secondary-color-100);
+  font-weight: 700;
 }
 @media screen and (min-width: 768px) {
   .button-to-top {

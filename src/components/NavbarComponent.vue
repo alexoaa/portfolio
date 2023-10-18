@@ -61,7 +61,6 @@ function scrollToSection(section) {
   align-items: center;
   z-index: 100;
   transition: all 0.2s ease;
-
   nav {
     display: flex;
     align-items: center;
@@ -81,30 +80,23 @@ function scrollToSection(section) {
 
       li {
         font-size: clamp(1.2rem, 4vw, 1.8rem);
-        font-weight: 400;
+        font-weight: 500;
         cursor: pointer;
         position: relative;
         min-width: 90px;
         &::after {
-          transition: all 0.3s ease;
+          transition:
+            opacity 0.3s ease,
+            width 0.3s ease;
           opacity: 0;
           content: '';
           position: absolute;
           left: -5%;
-          bottom: -2px;
+          bottom: -4px;
           width: 0;
-          height: 50%;
-          clip-path: polygon(
-            48% 79%,
-            100% 79%,
-            100% 93%,
-            48% 93%,
-            38% 100%,
-            0 100%,
-            0 88%,
-            38% 88%
-          );
-          background-color: var(--text-color-blue-white);
+          height: 3px;
+          border-radius: 10px;
+          background-color: var(--secondary-color-100);
         }
         &:hover {
           &::after {
@@ -117,7 +109,9 @@ function scrollToSection(section) {
   }
 }
 .navbarStickyClass {
-  box-shadow: 0 0 10px var(--tertiary-color-100);
+  // box-shadow: 0 0 10px var(--tertiary-color-100);
+  box-shadow: 0px 10px 10px -10px var(--tertiary-color-100);
+
   nav {
     top: 0;
   }

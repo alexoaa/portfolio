@@ -5,24 +5,29 @@
       'section-show': props.aboutMeSectionActive
     }"
   >
-    <section class="overflow-hidden" v-if="props.aboutMeSectionActive">
+    <section class="overflow-hidden" v-show="props.aboutMeSectionActive">
       <div class="about-info">
-        <h1 class="animate__animated animate__slideInLeft" style="animation-duration: 700ms">
+        <h1
+          class="section-title animate__animated animate__slideInLeft"
+          style="animation-duration: 700ms"
+        >
           About me
         </h1>
-        <p class="animate__animated animate__slideInLeft" style="animation-duration: 800ms">
-          My name is Alejandro, an enthusiastic developer with a strong passion for software
-          development, problem-solving and innovation.
-          <br />
-          <br />
-          My focus is on creating complete and functional solutions that can make a positive
-          difference in the world.
-
-          <br />
-          <br />
-          I love to turn innovative ideas into successful products that meet the needs of users and
-          improves people's lives.
+        <p class="animate__animated animate__slideInLeft mb-5" style="animation-duration: 800ms">
+          My name is Alejandro, I am an enthusiastic web developer who is passionate on creating
+          complete and functional web applications. I am interested in joining a team to gain
+          experience in the software development process and with my experience, creativity and
+          fresh ideas, contribute to the development and improvement of the value of the product,
+          the company and the team. <br /><br />
+          Eventually becoming an experienced software developer and being able to lead a team of
+          developers and projects.
         </p>
+        <div class="text-xl flex items-center">
+          <span>Location: Mexico City</span>
+          <svg class="w-[30px] h-[30px] ml-2">
+            <use href="@/assets/icons.svg#mexico" />
+          </svg>
+        </div>
       </div>
     </section>
   </section>
@@ -46,23 +51,22 @@ const props = defineProps(['aboutMeSectionActive']);
     padding-bottom: 20px;
     letter-spacing: 1px;
 
-    h1 {
-      width: fit-content;
-      font-size: 2.7rem;
-      font-weight: bold;
+    .section-title {
       margin-bottom: 40px;
-      border-bottom: 2px solid var(--text-color-blue-white);
     }
     p {
       font-size: 1.2rem;
     }
   }
 }
-
+@media screen and (min-width: 768px) {
+  .about-page {
+    min-height: calc(100dvh / 2);
+  }
+}
 @media screen and (min-width: 1200px) {
   .about-page {
     padding-top: 140px;
-    min-height: calc(100dvh / 2);
   }
 }
 </style>

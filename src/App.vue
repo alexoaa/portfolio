@@ -76,7 +76,7 @@ onMounted(() => {
       });
     },
     {
-      rootMargin: '-50% 0px -50% 0px'
+      rootMargin: '-40% 0px -60% 0px'
     }
   );
 
@@ -104,7 +104,6 @@ onMounted(() => {
 <style scoped lang="scss">
 #mainContainer {
   position: relative;
-  background-image: url('src/assets/images/bg.webp');
-  background-attachment: fixed;
+  background: var(--primary-color-darker-100);
 }
 </style>

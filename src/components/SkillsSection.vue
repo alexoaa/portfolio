@@ -1,29 +1,27 @@
 <template>
-  <section
-    class="main-page md:justify-center section-hidden"
-    :class="{
-      'section-show': props.skillsSectionActive
-    }"
-  >
+  <section class="main-page md:justify-center">
     <section
       class="relative w-full h-full flex flex-col items-center justify-center"
-      v-if="props.skillsSectionActive"
+      :class="'section-hidden' ? !props.projectsSectionActive : 'section-show'"
+      v-motion
+      :initial="{
+        opacity: 0
+      }"
+      :visibleOnce="{
+        opacity: 1,
+        transition: {
+          duration: 400,
+          ease: 'easeInOut'
+        }
+      }"
     >
       <div class="main-info">
         <h1
+          class="section-title"
           v-motion
           :initial="{
             opacity: 0,
             y: -30
-          }"
-          :enter="{
-            opacity: 1,
-            y: 0,
-            transition: {
-              delay: 60,
-              duration: 750,
-              ease: 'easeInOut'
-            }
           }"
           :visibleOnce="{
             opacity: 1,
@@ -40,13 +38,12 @@
         <div class="skills">
           <ul class="skills-list">
             <li
-              style="filter: drop-shadow(var(--drop-shadow-values-top) var(--html-color))"
               v-motion
               :initial="{
                 opacity: 0,
                 scale: 0.3
               }"
-              :enter="{
+              :visibleOnce="{
                 opacity: 1,
                 scale: 1,
                 transition: {
@@ -56,18 +53,17 @@
                 }
               }"
             >
-              <svg>
+              <svg style="filter: drop-shadow(var(--drop-shadow-values-top) var(--html-color))">
                 <use href="@/assets/icons.svg#html" />
               </svg>
             </li>
             <li
-              style="filter: drop-shadow(var(--drop-shadow-values-top) var(--css-color))"
               v-motion
               :initial="{
                 opacity: 0,
                 scale: 0.3
               }"
-              :enter="{
+              :visibleOnce="{
                 opacity: 1,
                 scale: 1,
                 transition: {
@@ -77,18 +73,17 @@
                 }
               }"
             >
-              <svg>
+              <svg style="filter: drop-shadow(var(--drop-shadow-values-top) var(--css-color))">
                 <use href="@/assets/icons.svg#css" />
               </svg>
             </li>
             <li
-              style="filter: drop-shadow(var(--drop-shadow-values-top) var(--javascript-color))"
               v-motion
               :initial="{
                 opacity: 0,
                 scale: 0.3
               }"
-              :enter="{
+              :visibleOnce="{
                 opacity: 1,
                 scale: 1,
                 transition: {
@@ -98,18 +93,19 @@
                 }
               }"
             >
-              <svg>
+              <svg
+                style="filter: drop-shadow(var(--drop-shadow-values-top) var(--javascript-color))"
+              >
                 <use href="@/assets/icons.svg#javascript" />
               </svg>
             </li>
             <li
-              style="filter: drop-shadow(var(--drop-shadow-values-top) var(--vue-color))"
               v-motion
               :initial="{
                 opacity: 0,
                 scale: 0.3
               }"
-              :enter="{
+              :visibleOnce="{
                 opacity: 1,
                 scale: 1,
                 transition: {
@@ -119,18 +115,17 @@
                 }
               }"
             >
-              <svg>
+              <svg style="filter: drop-shadow(var(--drop-shadow-values-top) var(--vue-color))">
                 <use href="@/assets/icons.svg#vuejs" />
               </svg>
             </li>
             <li
-              style="filter: drop-shadow(var(--drop-shadow-values-top) var(--sass-color))"
               v-motion
               :initial="{
                 opacity: 0,
                 scale: 0.3
               }"
-              :enter="{
+              :visibleOnce="{
                 opacity: 1,
                 scale: 1,
                 transition: {
@@ -140,18 +135,17 @@
                 }
               }"
             >
-              <svg>
+              <svg style="filter: drop-shadow(var(--drop-shadow-values-top) var(--sass-color))">
                 <use href="@/assets/icons.svg#sass" />
               </svg>
             </li>
             <li
-              style="filter: drop-shadow(var(--drop-shadow-values-top) var(--tailwind-color))"
               v-motion
               :initial="{
                 opacity: 0,
                 scale: 0.3
               }"
-              :enter="{
+              :visibleOnce="{
                 opacity: 1,
                 scale: 1,
                 transition: {
@@ -161,18 +155,17 @@
                 }
               }"
             >
-              <svg>
+              <svg style="filter: drop-shadow(var(--drop-shadow-values-top) var(--tailwind-color))">
                 <use href="@/assets/icons.svg#tailwind" />
               </svg>
             </li>
             <li
-              style="filter: drop-shadow(var(--drop-shadow-values-top) var(--nodejs-color))"
               v-motion
               :initial="{
                 opacity: 0,
                 scale: 0.3
               }"
-              :enter="{
+              :visibleOnce="{
                 opacity: 1,
                 scale: 1,
                 transition: {
@@ -182,18 +175,17 @@
                 }
               }"
             >
-              <svg>
+              <svg style="filter: drop-shadow(var(--drop-shadow-values-top) var(--nodejs-color))">
                 <use href="@/assets/icons.svg#nodejs" />
               </svg>
             </li>
             <li
-              style="filter: drop-shadow(var(--drop-shadow-values-top) var(--express-color))"
               v-motion
               :initial="{
                 opacity: 0,
                 scale: 0.3
               }"
-              :enter="{
+              :visibleOnce="{
                 opacity: 1,
                 scale: 1,
                 transition: {
@@ -203,18 +195,17 @@
                 }
               }"
             >
-              <svg>
+              <svg style="filter: drop-shadow(var(--drop-shadow-values-top) var(--express-color))">
                 <use href="@/assets/icons.svg#express" />
               </svg>
             </li>
             <li
-              style="filter: drop-shadow(var(--drop-shadow-values-top) var(--mysql-color))"
               v-motion
               :initial="{
                 opacity: 0,
                 scale: 0.3
               }"
-              :enter="{
+              :visibleOnce="{
                 opacity: 1,
                 scale: 1,
                 transition: {
@@ -224,18 +215,17 @@
                 }
               }"
             >
-              <svg>
+              <svg style="filter: drop-shadow(var(--drop-shadow-values-top) var(--mysql-color))">
                 <use href="@/assets/icons.svg#mysql" class="scale-110" />
               </svg>
             </li>
             <li
-              style="filter: drop-shadow(var(--drop-shadow-values-top) var(--git-color))"
               v-motion
               :initial="{
                 opacity: 0,
                 scale: 0.3
               }"
-              :enter="{
+              :visibleOnce="{
                 opacity: 1,
                 scale: 1,
                 transition: {
@@ -245,7 +235,7 @@
                 }
               }"
             >
-              <svg>
+              <svg style="filter: drop-shadow(var(--drop-shadow-values-top) var(--git-color))">
                 <use href="@/assets/icons.svg#git" />
               </svg>
             </li>
@@ -275,17 +265,11 @@ const props = defineProps(['skillsSectionActive']);
     position: relative;
     width: 100%;
     padding: 30px 20px;
-    background: rgba(16, 31, 44, 0.4);
+    background: var(--primary-color-100-opacity-4);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(0px);
-    h1 {
-      width: fit-content;
-      font-size: 2.7rem;
-      font-weight: bold;
+    .section-title {
       margin-bottom: 50px;
-      border-bottom: 2px solid var(--text-color-blue-white);
     }
     .skills {
       display: flex;
@@ -313,6 +297,11 @@ const props = defineProps(['skillsSectionActive']);
     }
   }
 }
+@media screen and (min-width: 768px) {
+  .main-page {
+    min-height: calc(100dvh / 2);
+  }
+}
 
 @media screen and (min-width: 1200px) {
   .main-page {
@@ -322,7 +311,6 @@ const props = defineProps(['skillsSectionActive']);
   }
   .main-info {
     padding: 30px 40px !important;
-    // margin-top: 80px;
   }
 }
 </style>
