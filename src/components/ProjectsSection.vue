@@ -32,7 +32,7 @@
               }
             }"
           >
-            <a href="https://dogbarber.netlify.app/" target="_blank">
+            <a href="https://dogbarber.alexoa.dev/" target="_blank">
               <img src="@/assets/images/dogbarber.webp" alt="" />
               <div class="project-card-desc">
                 <h1>DogBarber - Pet Grooming</h1>
