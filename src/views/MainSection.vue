@@ -79,7 +79,7 @@
                 <use href="@/assets/icons.svg#github" />
               </svg>
             </a>
-            <a href="/cv_alexoa.pdf" download>
+            <a href="/cv_alexoa.pdf" target="_blank">
               <svg>
                 <use href="@/assets/icons.svg#resume" />
               </svg>
