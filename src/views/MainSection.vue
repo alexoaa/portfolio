@@ -53,7 +53,7 @@
             }
           }"
         >
-          Web developer - FullStack
+          FullStack Web Developer
         </h2>
         <div
           class="social-contact"
@@ -88,6 +88,14 @@
         </div>
       </div>
     </section>
+    <div class="absolute top-[5px] right-[10px]">
+      <svg class="w-[2rem] h-[2rem]">
+        <use href="@/assets/icons.svg#usa" />
+      </svg>
+      <svg class="w-[2rem] h-[2rem]">
+        <use href="@/assets/icons.svg#mexico" />
+      </svg>
+    </div>
   </article>
 </template>
 
@@ -182,7 +190,8 @@
       &:hover {
         cursor: pointer;
         transform: scale(1.15);
-        box-shadow: 0 0 10px var(--secondary-color-100);
+        filter: drop-shadow(0 0 3px var(--secondary-color-100))
+          drop-shadow(0 0 3px var(--secondary-color-100));
       }
     }
   }

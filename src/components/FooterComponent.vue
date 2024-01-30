@@ -1,9 +1,6 @@
 <template>
   <footer>
-    <svg>
-      <use href="@/assets/icons.svg#mexico" />
-    </svg>
-    <p>© Software engineer dedicated to transforming ideas into tangible solutions.</p>
+    <p>©2024 Software engineer dedicated to transforming ideas into tangible solutions.</p>
   </footer>
 </template>
 

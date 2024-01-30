@@ -255,21 +255,20 @@ const props = defineProps(['skillsSectionActive']);
   position: relative;
   min-height: 100dvh;
   width: 100%;
-  padding: 0 10px;
+  padding: 110px 10px 0;
   display: flex;
   align-items: flex-start;
-  padding-top: 110px;
   z-index: 10;
 
   .main-info {
     position: relative;
     width: 100%;
-    padding: 30px 20px;
+    padding: 30px 0;
     background: var(--primary-color-100-opacity-4);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     .section-title {
-      margin-bottom: 50px;
+      margin: 0 12px 50px;
     }
     .skills {
       display: flex;
@@ -305,12 +304,14 @@ const props = defineProps(['skillsSectionActive']);
 
 @media screen and (min-width: 1200px) {
   .main-page {
-    min-height: calc(100dvh / 2 + 200px);
-    padding-top: 0;
     align-items: center;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
   .main-info {
-    padding: 30px 40px !important;
+    .section-title {
+      margin: 0 0 50px !important;
+    }
   }
 }
 </style>

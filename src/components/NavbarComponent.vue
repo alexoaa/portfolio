@@ -109,8 +109,7 @@ function scrollToSection(section) {
   }
 }
 .navbarStickyClass {
-  // box-shadow: 0 0 10px var(--tertiary-color-100);
-  box-shadow: 0px 10px 10px -10px var(--tertiary-color-100);
+  box-shadow: 0px 10px 20px -15px var(--tertiary-color-100);
 
   nav {
     top: 0;

@@ -37,11 +37,9 @@
               <div class="project-card-desc">
                 <h1>DogBarber - Pet Grooming</h1>
                 <p>
-                  Web application for a small business that offers grooming services. The main
-                  objective is to digitize and streamline the appointment scheduling process with
-                  the pet groomer, manage the daily, monthly, and annual schedule, and allow
-                  customers to schedule appointments without having to call or go to a physical
-                  store.
+                  Web application for a small business that offers grooming services. The goal is to
+                  digitize and streamline the process of scheduling appointments with the pet
+                  groomer, and make scheduling easier for the client.
                 </p>
                 <ul class="project-card-technologies">
                   <li>
@@ -89,7 +87,7 @@ const props = defineProps(['projectsSectionActive']);
   width: 100%;
   position: relative;
   z-index: 10;
-  padding: 110px 10px;
+  padding: 110px 22px 0;
 
   .projects-info {
     text-align: left;
@@ -108,7 +106,6 @@ const props = defineProps(['projectsSectionActive']);
         border: 2px solid var(--primary-color-200);
         overflow: hidden;
         min-height: 500px;
-        width: 300px;
         a {
           position: relative;
           display: block;
@@ -167,13 +164,18 @@ const props = defineProps(['projectsSectionActive']);
 
 @media screen and (min-width: 768px) {
   .main-page {
-    padding-top: 120px;
+    padding-top: 110px;
   }
 }
 
 @media screen and (min-width: 1200px) {
+  .main-page {
+    padding-left: 0;
+    padding-right: 0;
+  }
   .projects-info {
     .projects-cards-container {
+      align-items: flex-start !important;
       .project-card {
         min-height: 350px !important;
         height: 350px !important;
