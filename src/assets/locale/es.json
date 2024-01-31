@@ -1,0 +1,26 @@
+{
+  "role": "Desarrollador Web FullStack",
+  "navbar-buttons": {
+    "about-me": "Sobre mi",
+    "skills": "Habilidades",
+    "my-work": "Mi trabajo"
+  },
+  "section-about-me": {
+    "title": "Sobre mi",
+    "description": "Hola soy Alejandro, desarrollador web full stack enfocado en desarrollar aplicaciones web completas. Busco un equipo para ampliar mi experiencia como desarrollador de software compartiendo mis ideas, creatividad y trabajo en equipo, aportando alto valor tanto al proceso de desarrollo como al producto de software.",
+    "description2": "Mi objetivo es obtener la experiencia y conocimientos necesarios para convertirme en arquitecto y liderar equipos durante todo el proceso de desarrollo."
+  },
+  "section-skills": {
+    "title": "Tecnologías"
+  },
+  "section-my-work": {
+    "title": "Mi trabajo",
+    "projects": {
+      "dogbarber": {
+        "title": "DogBarber - Estética Canina",
+        "description": "Aplicación web para un pequeño negocio que ofrece servicios de cuidado para mascotas. El objetivo es digitalizar y optimizar el proceso de programación de citas para el peluquero y para el cliente."
+      }
+    }
+  },
+  "footer": "Ingeniero de software dedicado a transformar ideas en soluciones tangibles."
+}

@@ -33,7 +33,7 @@
             }
           }"
         >
-          Tech Stack
+          {{ $t('section-skills.title') }}
         </h1>
         <div class="skills">
           <ul class="skills-list">

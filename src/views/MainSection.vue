@@ -37,7 +37,7 @@
           Alejandro Olvera
         </h1>
         <h2
-          class="rol"
+          class="role"
           v-motion
           :initial="{
             opacity: 0,
@@ -53,7 +53,7 @@
             }
           }"
         >
-          FullStack Web Developer
+          {{ $t('role') }}
         </h2>
         <div
           class="social-contact"
@@ -79,7 +79,7 @@
                 <use href="@/assets/icons.svg#github" />
               </svg>
             </a>
-            <a href="/CV_Alejandro_Olvera.pdf" target="_blank">
+            <a :href="resumeURL" target="_blank">
               <svg>
                 <use href="@/assets/icons.svg#resume" />
               </svg>
@@ -88,13 +88,17 @@
         </div>
       </div>
     </section>
-    <div class="absolute top-[5px] right-[10px]">
-      <svg class="w-[2rem] h-[2rem]">
-        <use href="@/assets/icons.svg#usa" />
-      </svg>
-      <svg class="w-[2rem] h-[2rem]">
-        <use href="@/assets/icons.svg#mexico" />
-      </svg>
+    <div class="lang-select">
+      <div v-if="store().locale === 'EN'" @click="changeLanguage('ES'), ($i18n.locale = 'ES')">
+        <svg>
+          <use href="@/assets/icons.svg#usa" />
+        </svg>
+      </div>
+      <div v-else @click="changeLanguage('EN'), ($i18n.locale = 'EN')">
+        <svg>
+          <use href="@/assets/icons.svg#mexico" />
+        </svg>
+      </div>
     </div>
   </article>
 </template>
@@ -107,6 +111,29 @@
   display: flex;
   align-items: center;
 
+  .lang-select {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    z-index: 3;
+    div {
+      display: flex;
+      align-items: center;
+      span {
+        margin-right: 5px;
+      }
+    }
+    svg {
+      width: clamp(2rem, 5vw, 2.5rem);
+      height: clamp(2rem, 5vw, 2.5rem);
+      transition: all 300ms ease;
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.15);
+        filter: drop-shadow(0 0 3px var(--secondary-color-100));
+      }
+    }
+  }
   .main-logo {
     width: 250px;
     height: 250px;
@@ -143,7 +170,6 @@
       border-radius: 50%;
     }
   }
-
   .main-info {
     position: relative;
     z-index: 10;
@@ -168,7 +194,7 @@
       text-transform: uppercase;
       line-height: 50px;
     }
-    .rol {
+    .role {
       font-size: clamp(1.3rem, 5vw, 2.2rem);
       font-weight: 500;
       position: relative;
@@ -177,7 +203,6 @@
       width: 100%;
     }
   }
-
   .social-contact {
     width: 100%;
     display: flex;
@@ -207,7 +232,7 @@
     .name {
       line-height: 80px !important;
     }
-    .rol {
+    .role {
       margin-bottom: 25px !important;
     }
   }
@@ -222,3 +247,16 @@
 @media screen and (min-width: 1536px) {
 }
 </style>
+
+<script setup>
+import { computed } from 'vue';
+import store from '@/stores/store';
+
+const resumeURL = computed(() => {
+  return `/${store().locale === 'EN' ? 'CV_Alejandro_Olvera.pdf' : 'CV_Alejandro_Olvera_ES.pdf'}`;
+});
+
+function changeLanguage(locale) {
+  store().locale = locale;
+}
+</script>

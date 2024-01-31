@@ -11,7 +11,7 @@
           class="section-title animate__animated animate__fadeInDown"
           style="animation-duration: 1s"
         >
-          My work
+          {{ $t('section-my-work.title') }}
         </h1>
         <ul class="projects-cards-container">
           <li
@@ -35,11 +35,9 @@
             <a href="https://dogbarber.alexoa.dev/" target="_blank">
               <img src="@/assets/images/dogbarber.webp" alt="" />
               <div class="project-card-desc">
-                <h1>DogBarber - Pet Grooming</h1>
+                <h1>{{ $t('section-my-work.projects.dogbarber.title') }}</h1>
                 <p>
-                  Web application for a small business that offers grooming services. The goal is to
-                  digitize and streamline the process of scheduling appointments with the pet
-                  groomer, and make scheduling easier for the client.
+                  {{ $t('section-my-work.projects.dogbarber.description') }}
                 </p>
                 <ul class="project-card-technologies">
                   <li>

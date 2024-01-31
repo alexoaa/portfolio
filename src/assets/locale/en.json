@@ -1,0 +1,26 @@
+{
+  "role": "FullStack Web Developer",
+  "navbar-buttons": {
+    "about-me": "About me",
+    "skills": "Skills",
+    "my-work": "My work"
+  },
+  "section-about-me": {
+    "title": "About me",
+    "description": "Hi I'm Alejandro, a full stack web developer focused on developing complete web applications. I'm looking for a team to extend my experience as a software developer by sharing my ideas, creativity and teamwork, providing high value to both development process and software product.",
+    "description2": "My goal is to achieve the required ins and outs, to become an architect and lead teams towards the whole development process."
+  },
+  "section-skills": {
+    "title": "Tech Stack"
+  },
+  "section-my-work": {
+    "title": "My work",
+    "projects": {
+      "dogbarber": {
+        "title": "DogBarber - Pet Grooming",
+        "description": "Web application for a small business that offers grooming services. The goal is to digitize and streamline the process of scheduling appointments with the pet groomer, and make scheduling easier for the client."
+      }
+    }
+  },
+  "footer": "Software engineer dedicated to transforming ideas into tangible solutions."
+}

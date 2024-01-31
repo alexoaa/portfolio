@@ -18,19 +18,19 @@
           @click="scrollToSection('aboutMeSection')"
           :class="{ activeSection: props.currentSection == 'aboutMeSection' }"
         >
-          About me
+          {{ $t('navbar-buttons.about-me') }}
         </li>
         <li
           @click="scrollToSection('skillsSection')"
           :class="{ activeSection: props.currentSection == 'skillsSection' }"
         >
-          Skills
+          {{ $t('navbar-buttons.skills') }}
         </li>
         <li
           @click="scrollToSection('projectsSection')"
           :class="{ activeSection: props.currentSection == 'projectsSection' }"
         >
-          My work
+          {{ $t('navbar-buttons.my-work') }}
         </li>
       </ul>
     </nav>

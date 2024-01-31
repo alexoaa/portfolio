@@ -11,15 +11,12 @@
           class="section-title animate__animated animate__slideInLeft"
           style="animation-duration: 700ms"
         >
-          About me
+          {{ $t('section-about-me.title') }}
         </h1>
         <p class="animate__animated animate__slideInLeft mb-5" style="animation-duration: 800ms">
-          Hi I'm Alejandro, a full stack web developer focused on developing complete web
-          applications. I'm looking for a team to extend my experience as a software developer by
-          sharing my ideas, creativity and teamwork, providing high value to both development
-          process and software product. <br /><br />
-          My goal is to achieve the required ins and outs, to become an architect and lead teams
-          towards the whole development process.
+          {{ $t('section-about-me.description') }}
+          <br /><br />
+          {{ $t('section-about-me.description2') }}
         </p>
       </div>
     </section>

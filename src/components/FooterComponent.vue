@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <p>©2024 Software engineer dedicated to transforming ideas into tangible solutions.</p>
+    <p>©2024 {{ $t('footer') }}</p>
   </footer>
 </template>
 
