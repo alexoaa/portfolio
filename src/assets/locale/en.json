@@ -18,7 +18,7 @@
     "projects": {
       "dogbarber": {
         "title": "DogBarber - Pet Grooming",
-        "description": "Web application for a small business that offers grooming services. The goal is to digitize and streamline the process of scheduling appointments with the pet groomer, and make scheduling easier for the client."
+        "description": "Web application for a small business that offers grooming services for pets. The goal is to digitize and streamline the process of scheduling appointments by implementing the business rules."
       }
     }
   },

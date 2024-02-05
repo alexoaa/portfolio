@@ -18,7 +18,7 @@
     "projects": {
       "dogbarber": {
         "title": "DogBarber - Estética Canina",
-        "description": "Aplicación web para un pequeño negocio que ofrece servicios de cuidado para mascotas. El objetivo es digitalizar y optimizar el proceso de programación de citas para el peluquero y para el cliente."
+        "description": "Aplicación web para un pequeño negocio que ofrece servicios de estética para mascotas. Con el objetivo digitalizar y optimizar el proceso de programación de citas implementando las reglas del negocio."
       }
     }
   },
